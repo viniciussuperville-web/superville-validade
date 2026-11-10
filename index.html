@@ -110,6 +110,7 @@
 </style>
 </head>
 <body>
+<script src="sv-padrao/abertura.js" data-app="Controle de Validade"></script>
 
 <header>
   <div class="brand">
@@ -122,13 +123,11 @@
   </div>
 </header>
 
-<div id="lock-screen" class="lock-screen">
-  <div class="lock-card">
-    <img id="lock-logo" alt="SuperVille" style="width:120px;border-radius:8px;object-fit:cover;">
-    <div class="lock-eyebrow">SuperVille</div>
-    <h1 class="lock-title">Controle de validade</h1>
-    <span class="lock-subtitle">Acesso restrito. Faça login para continuar.</span>
-    <div style="margin-top:6px;">
+<div id="lock-screen" class="lock-screen sv-login-fundo">
+  <div class="sv-login">
+    <img id="lock-logo" alt="" hidden>
+    <div class="sv-login-head"><img src="sv-padrao/logo.png" alt="SuperVille Supermercado"><b>Controle de Validade</b><small>Acesso restrito. Faça login para continuar.</small></div>
+    <div class="sv-login-body">
       <label class="lock-field-label">Login</label>
       <select id="login-user" class="lock-input">
         <option value="Prevenção">Prevenção</option>
@@ -137,8 +136,8 @@
       </select>
       <label class="lock-field-label">Senha</label>
       <input type="password" id="login-senha" class="lock-input" placeholder="••••••••" onkeydown="if(event.key==='Enter') fazerLogin()">
-      <div id="login-erro" class="lock-error"></div>
-      <button class="lock-btn" onclick="fazerLogin()">Entrar</button>
+      <div id="login-erro" class="lock-error" style="color:#D93025;margin:0 0 6px"></div>
+      <button class="lock-btn sv-btn" onclick="fazerLogin()">Entrar</button>
     </div>
   </div>
 </div>
